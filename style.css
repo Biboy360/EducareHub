@@ -1,0 +1,847 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(0deg,#0f9e9972 40%, #EFEFEF 100%);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+/* main content */
+.main-content {
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 16px;
+}
+/*For Whole body font Categories*/
+.section-title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #646464;
+}
+
+.menu-title {
+    font-weight: 300;
+    font-size: 14px;
+    color: #646464;
+}
+.borderline {
+    border-top:3px solid gray ;
+}
+
+.logoText {
+    font-weight: 700;
+    font-size: 20px;
+    color: #0F9E99;
+    text-decoration: none;
+}
+
+.menus {
+    font-weight: 400;
+    font-size: 14px;
+    color: #646464;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: white;
+    gap: 5px;
+    border-radius: 20px;
+    border: none;
+    padding: 8px 5px 8px 5px;
+}
+.menus.active {
+    background-color: #00A8B5; /* Your desired active background color */
+    color: white; /* Your desired active text color */
+    box-shadow: 0 0px 15px rgba(0, 37, 40, 0.37); /* Subtle shadow for active state */
+}
+
+/* Optional: Hover state for non-active menus */
+.menus:not(.active):hover {
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #007c84;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.354) inset;
+}
+.menu-icon {
+    margin-left: 10px;
+    width: 15px;
+}
+
+.logout {
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.hello {
+    font-weight: 200;
+    font-size: 32px;
+}
+#realTimeClockDisplay {
+    font-weight: 500;
+    font-size: 14px;
+    color: #3C3C3C;
+}
+.userName {
+    font-weight: 700;
+    font-size: 30px;
+    color: #3C3C3C;
+}
+.clock {
+    background-color: #ffffff;
+    border: 2px solid #909090;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+        
+.notification {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: #000000;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.notification i {
+    margin-right: 5px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/*For Pomodoro*/
+.collapse-pomodoro {
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 16px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 10px;
+    max-width: 430px;
+}
+.main-timer-display {
+    font-weight: 500;
+    font-size: 60px;
+    color: #000000;
+}
+#taskInput {
+    border: none;
+    font-weight: 300;
+    font-size: 14px;
+    color: #303030;
+}
+.pomodoro-arrow {
+    border:none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #0F9E99;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #64c8c5;
+    min-width: 150px;
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+}
+.pomodoro-arrow.active-mode {
+    color: #ffffff;
+    background-color: #0F9E99; 
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    border-color: #0F9E99;
+}
+.pomodoro-arrow:focus {
+    outline: none; 
+}
+.pomodoro-buttons {
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #646464;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+.pomodoro-buttons:focus {
+    padding: 0px 10px 0px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #646464;
+    color: white;
+    opacity: 0.4;
+    font-weight: 500;
+    font-size: 12px;
+}
+.mode-circle {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 500px;
+    background-color: #0F9E99;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+ }
+ .text-xl {
+    font-size: small;
+ }
+ .mode-text {
+    margin-bottom: 5px;
+    margin-top: 5px;
+ }
+ 
+/*for music */
+
+.music-player-container {
+    background-color: #e0f2f1; 
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.music-player-title {
+    font-size: 12px;
+    font-weight: 800;
+    color: #5c5c5c;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    width: 100%;
+}
+
+.album-art-wrapper {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #c8e6c9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.tiny-play-pause-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4); 
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10; 
+    color: #ffffff; 
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tiny-play-pause-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.tiny-play-pause-button .play-icon,
+.tiny-play-pause-button .pause-icon {
+    width: 16px; 
+    height: 16px;
+    fill: currentColor;
+}
+
+.song-info {
+    flex-grow: 1; 
+    min-width: 0; 
+}
+
+.song-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.song-duration {
+    font-size: 12px;
+    color: #666;
+}
+
+.controls-compact {
+    display: flex;
+    gap: 5px; 
+    flex-shrink: 0; 
+}
+
+.control-button-compact {
+    background-color: transparent; 
+    border: none;
+    color: #000000; /* Black icons for prev/next based on desired image */
+    cursor: pointer;
+    width: 35px; 
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.1s ease-in-out, color 0.2s;
+}
+
+.control-button-compact:hover {
+    color: #0F9E99;
+}
+
+.control-button-compact:active {
+    transform: scale(0.9);
+}
+
+.control-button-compact svg {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* for task manager */
+.task-manager {
+    background: rgba(255, 254, 254, 0.435);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(164, 164, 164, 0.3);
+}
+.focus-goals-card {
+    width: 100%;
+    max-width: 750;
+    padding: 25px;
+}
+.task-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-card-header h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #646464;
+}
+
+/* Card content layout */
+.card-content {
+    display: flex;
+}
+
+/* Left side with tasks */
+.tasks-container {
+    flex: 2;
+    padding-right: 20px;
+}
+
+/* Make tasks scrollable instead of expanding */
+#focusTasks {
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 15px;
+    /* Scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #5C899D #EFE9E0;
+}
+
+/* Scrollbar styling for Chrome/Safari */
+#focusTasks::-webkit-scrollbar {
+    width: 6px;
+}
+
+#focusTasks::-webkit-scrollbar-track {
+    background: #EFE9E0;
+    border-radius: 10px;
+}
+
+#focusTasks::-webkit-scrollbar-thumb {
+    background-color: #5C899D;
+    border-radius: 10px;
+}
+
+/* Right side with progress circle */
+.progress-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual task styling */
+.task-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.task-time {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #5C899D; /* Cool Teal for time */
+    margin-bottom: 5px;
+}
+
+.task-title {
+    margin-left: 25px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Task status indicator (circle) */
+.task-status {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Different colors for task status */
+.status-completed {
+    background-color: #0F9E99; /* Tropical Teal for completed */
+}
+
+.status-ongoing {
+    background-color: #5C899D; /* Cool Teal for ongoing */
+}
+
+/* Progress circle styling */
+.progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#0F9E99 0% var(--percentage, 0%), #EFE9E0 var(--percentage, 0%) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.progress-circle-inner {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #FFFCEF; /* Ivory White for inner circle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.percentage {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0F9E99; /* Tropical Teal for percentage */
+    line-height: 1;
+}
+
+.task-completed-text {
+    font-size: 0.6rem;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.motivational-text {
+    text-align: center;
+    color: #5C899D; /* Cool Teal for text */
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Link to open task manager */
+.go-to-task-manager {
+    display: inline-block;
+    margin-top: 15px;
+    color: #0F9E99; /* Tropical Teal for link */
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.go-to-task-manager:hover {
+    text-decoration: underline;
+}
+
+/* Finish day button in Focus Goals */
+.finish-day-btn {
+    background-color: #5C899D; /* Cool Teal for button */
+    color: #FFFCEF; /* Ivory White for button text */
+    border: 2px solid #5C899D;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.finish-day-btn:hover {
+    background-color: #4a7a8a;
+    border-color: #4a7a8a;
+}
+
+/* ===== TASK MANAGER MODAL STYLES ===== */
+/* Modal overlay */
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+} */
+
+/* Modal content container */
+/* .modal-content {
+    background-color: #0F9E99; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    position: relative;
+    margin: 10% auto;
+    color: #333;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #FFFCEF; 
+}
+
+.modal-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+} */
+
+/* Date display section */
+.date-display {
+    background-color: #FFFCEF; /* Ivory White background */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.day-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #5C899D; /* Cool Teal for day name */
+}
+
+.day-number {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #0F9E99; /* Tropical Teal for day number */
+    color: #FFFCEF; /* Ivory White for number text */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+.month-name {
+    font-size: 0.9rem;
+    color: #5C899D; /* Cool Teal for month name */
+}
+
+/* Progression bar section */
+.progression-container {
+    background-color: #FFFCEF; /* Ivory White background */
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.progression-title {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #5C899D; /* Cool Teal for title */
+}
+
+.progression-bar {
+    height: 10px;
+    background-color: #EFE9E0; /* Soft Ivory for bar background */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progression-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #0F9E99; /* Tropical Teal for progress */
+    transition: width 0.3s ease;
+}
+
+/* Task input section */
+.task-input-container {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background-color: #FFFCEF; /* Ivory White for input */
+}
+
+.add-task-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #5C899D; /* Cool Teal for button */
+    color: #FFFCEF; /* Ivory White for button text */
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Task list container */
+.task-list-container {
+    background-color: #FFFCEF; /* Ivory White background */
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    min-height: 200px;
+    max-height: 250px;
+    overflow-y: auto;
+    /* Scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #5C899D #EFE9E0;
+}
+
+/* Scrollbar styling for Chrome/Safari */
+.task-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.task-list-container::-webkit-scrollbar-track {
+    background: #EFE9E0;
+    border-radius: 10px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+    background-color: #5C899D;
+    border-radius: 10px;
+}
+
+/* Task list styling */
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.task-list li:before {
+    content: "🍃";
+    margin-right: 10px;
+}
+
+.task-list li .delete-btn {
+    margin-left: auto;
+    color: #999;
+    cursor: pointer;
+}
+
+.task-list li .delete-btn:hover {
+    color: #ff3547;
+}
+
+/* Confirm button in Task Manager */
+.confirm-btn {
+    background-color: #5C899D; /* Cool Teal for button */
+    color: #FFFCEF; /* Ivory White for button text */
+    border: 2px solid #FFFCEF; /* Ivory White border */
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.confirm-btn:hover {
+    background-color: #4a7a8a;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 600px) {
+    /* Stack content vertically on small screens */
+    .card-content {
+        flex-direction: column;
+    }
+    
+    .tasks-container {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    
+    /* Smaller progress circle on mobile */
+    .progress-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .progress-circle-inner {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .percentage {
+        font-size: 2rem;
+    }
+
+    /* Adjust modal on small screens */
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        margin: 20% auto;
+    }
+}
+
+/* Layout for modal content */
+.modal-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-col-4 {
+    flex: 4;
+}
+
+.modal-col-8 {
+    flex: 8;
+}
+
+/* Stack modal columns on small screens */
+@media (max-width: 600px) {
+    .modal-row {
+        flex-direction: column;
+    }
+}
+
+/* Message for when there are no tasks */
+.no-tasks-message {
+    color: #5C899D; /* Cool Teal for message */
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.chart-header, .section_header, .dashboard-section-title {
+    color: #1976d2 !important;
+    font-weight: 700 !important;
+    background: none !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    border-bottom: 2px solid #0F9E99;
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+    margin-top: 18px;
+}
+@media (max-width: 900px) {
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.chart-box, .highcharts-figure {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(60,72,88,0.08);
+    padding: 18px 12px 12px 12px;
+    margin: 0;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
